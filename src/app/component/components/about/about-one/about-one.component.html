@@ -1,0 +1,52 @@
+<!-- About Us -->
+<div class="section-full content-inner-2 bg-white wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s" id="about-us" style="background-image:url(assets/images/pattern/pt13.png);">
+	<div class="container">
+		<div class="row about-bx3">
+			<div class="col-lg-6 col-md-12 m-b30">
+				<div class="about-img-box">
+					<div class="about-text">
+						<p>Since 1st April 1972</p>
+					</div>
+					<div class="about-img-one">
+						<img src="assets/images/about/construct/about-1.jpg" alt="">
+					</div>
+					<div class="about-img-two">
+						<img src="assets/images/about/construct/about-2.jpg" alt="">
+					</div>
+					<div class="about-img-three">
+						<div class="video-bx">
+							<img src="assets/images/about/construct/about-3.jpg" alt="">
+							<div class="video-play-icon">
+								<a href="https://www.youtube.com/watch?v=f4Bts39jimI" class="popup-youtube video"><i class="fa fa-play"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12">
+				<div class="about-contact-box">
+					<div class="dlab-tabs tabs-site-button">
+						<div class="tab-content">
+							<div *ngFor = "let item of content let key = index" id="{{item.id}}" class="tab-pane {{key == 0 ? 'active' : ''}}">
+								<div class="about-inner-content">
+									<h2 class="rotate-text">{{item.text}}</h2>
+									<div class="m-b30">
+										<img src="assets/images/about/construct/{{item.image}}" alt="">
+									</div>
+									<h2 class="title">{{item.title}}</h2>
+									<p class="m-b20">{{item.description}}</p>
+								</div>
+							</div>
+						</div>
+						<ul class="nav nav-tabs ">
+							<li *ngFor="let item of tabList let key = index">
+								<a data-toggle="tab" href="#{{item.id}}" class="{{key == 0 ? 'active' : ''}}">{{item.count}}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About Us End -->

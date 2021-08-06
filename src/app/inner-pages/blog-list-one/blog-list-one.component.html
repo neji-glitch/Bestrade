@@ -1,0 +1,66 @@
+<link class="skin" rel="stylesheet" type="text/css" href="/assets/css/skin/skin-4.css">
+<app-header-four [data]="menuList"></app-header-four>
+<app-page-header-one [data] = "banner"></app-page-header-one>
+<div class="content-block">
+	<div class="section-full content-inner-2">
+		<div class="container">
+			<div class="row">
+				<!-- blog grid -->
+				<div id="masonry" class="row dlab-blog-grid-3 m-a0">
+					<div *ngFor = "let item of blogList" class="post card-container col-lg-4 col-md-6 col-sm-12">
+						<div class="blog-post style1 blog-grid">
+							<div class="dlab-post-media dlab-img-effect"> 
+								<a href="blog-single.html"><img src="assets/images/blog/grid/{{item.image}}" alt=""></a> 
+								<div class="dlab-post-meta">
+									<ul>
+										<li class="post-date">{{item.date}}</li>
+										<li class="post-author"><img src="assets/images/testimonials/{{item.testimonial_image}}" alt=""><a href="javascript:void(0);">{{item.author}}</a> </li>
+									</ul>
+								</div>
+							</div>
+							<div class="dlab-info">
+								<ul class="categories">
+									<li><a [routerLink] = "'/blog-list-two'">{{item.category}}</a></li>
+								</ul>
+								<div class="dlab-post-title ">
+									<h3 class="post-title"><a [routerLink] = "'/blog-list-two'">{{item.title}}</a></h3>
+								</div>
+								<div class="dlab-post-readmore"> 
+									<a [routerLink] = "'/blog-single'" class="site-button white align-self-center ml-auto half-btn">
+										<span>Read More</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- blog grid END -->
+				<!-- Pagination -->
+				<div class="pagination-bx clearfix col-md-12 m-b0 text-center">
+					<ul class="pagination">
+						<li class="previous"><a href="javascript:void(0);"><i class="ti ti-arrow-left"></i> Prev</a></li>
+						<li class="active"><a href="javascript:void(0);">1</a></li>
+						<li><a href="javascript:void(0);">2</a></li>
+						<li><a href="javascript:void(0);">3</a></li>
+						<li class="next"><a href="javascript:void(0);">Next <i class="ti ti-arrow-right"></i></a></li>
+					</ul>
+				</div>
+				<!-- Pagination END -->
+			</div>
+		</div>
+	</div>
+	<!-- Blog End -->
+	<div class="section-full p-tb40 bg-primary construct-action" style="background-image: url(assets/images/pattern/pt5.png);">
+		<div class="container">
+			<div class="row spno">
+				<div class="col-sm-6 col-6">
+					<a href="#"><i class="las la-envelope-open"></i>Email: info@example.com</a>
+				</div>
+				<div class="col-sm-6 col-6 text-right">
+					<a href="#">Support: 0800-123456<i class="las la-phone-volume"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<app-footer-four></app-footer-four>

@@ -1,0 +1,32 @@
+<!-- Team -->
+<div class="section-full bg-white content-inner" id="team">
+	<div class="container">
+		<div class="section-head text-center">
+			<h5 class="title-small">{{subtitle}}</h5>
+			<div class="dlab-separator-outer">
+				<div class="dlab-separator bg-primary style-skew"></div>
+			</div>
+			<h2 class="title">{{title}}</h2>
+		</div>
+		<div class="row">
+			<div *ngFor = "let list of team" class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+				<div class="dlab-box m-b30 dlab-team9">
+					<div class="dlab-media dlab-media-right">
+						<a href="javascript:void(0);">
+							<img alt="" src="assets/images/our-team/{{list.image}}">
+						</a>
+						<div class="dlab-info-has">
+							<ul class="dlab-social-icon">
+								<li *ngFor = "let item of list.sociallist let key = index" [innerHTML] = "item.icon"></li>
+							</ul>
+						</div>
+						<div class="clearfix">
+							<h4 class="dlab-title"><a href="javascript:void(0);">{{list.title}}</a></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Team END -->

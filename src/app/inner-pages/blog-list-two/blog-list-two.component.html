@@ -1,0 +1,61 @@
+<link class="skin" rel="stylesheet" type="text/css" href="/assets/css/skin/skin-1.css">
+<app-header-one [data]="menuList"></app-header-one>
+<app-page-header-one [data] = "banner"></app-page-header-one>
+
+<div class="content-block">
+	<div class="section-full content-inner-2">
+		<div class="container">
+			<div class="row">
+				<!-- blog grid -->
+				<div id="masonry" class="dlab-blog-grid-3 row">
+					<div *ngFor = "let item of blogList" class="post card-container col-lg-4 col-md-6 col-sm-12">
+						<div class="blog-post trending-post text-center text-white post-overlay">
+							<div class="dlab-post-media dlab-img-effect"> 
+								<a href="blog-single.html"><img src="assets/images/blog/grid/{{item.image}}" alt=""></a> 
+							</div>
+							<div class="dlab-info">
+								<div class="dlab-post-meta">
+									<ul>
+										<li class="post-date"> <i class="fa fa-calendar"></i>{{item.date}}</li>
+										<li class="post-comment"><i class="fa fa-comments"></i> <a href="javascript:void(0);">{{item.comment}}</a> </li>
+									</ul>
+								</div>
+								<div class="dlab-post-title">
+									<h5 class="post-tag font-weight-500"><a class="text-white" href="blog-single.html">{{item.category}}</a></h5>
+									<h5 class="post-title font-weight-500"><a [routerLink] = "'/blog-list-one'">{{item.title}}</a></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- blog grid END -->
+				<!-- Pagination -->
+				<div class="pagination-bx clearfix col-md-12 m-b0 text-center">
+					<ul class="pagination">
+						<li class="previous"><a href="javascript:void(0);"><i class="ti-arrow-left"></i> Prev</a></li>
+						<li class="active"><a href="javascript:void(0);">1</a></li>
+						<li><a href="javascript:void(0);">2</a></li>
+						<li><a href="javascript:void(0);">3</a></li>
+						<li class="next"><a href="javascript:void(0);">Next <i class="ti-arrow-right"></i></a></li>
+					</ul>
+				</div>
+
+				<!-- Pagination END -->
+			</div>
+		</div>
+	</div>
+	<!-- Blog End -->
+	<div class="section-full p-tb40 bg-primary construct-action" style="background-image: url(assets/images/pattern/pt5.png);">
+		<div class="container">
+			<div class="row spno">
+				<div class="col-sm-6 col-6">
+					<a href="#"><i class="las la-envelope-open"></i>Email: info@example.com</a>
+				</div>
+				<div class="col-sm-6 col-6 text-right">
+					<a href="#">Support: 0800-123456<i class="las la-phone-volume"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<app-footer-one></app-footer-one>
